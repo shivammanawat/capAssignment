@@ -1,0 +1,36 @@
+<div class="style">
+
+  <nav classs="navbar">
+    <a routerLink="/add"> <button class="btn btn-info btn-md">Add</button></a>&nbsp;
+    <a routerLink="/show"> <button class="btn btn-info btn-md">Show</button></a>&nbsp;
+  </nav>
+
+  <div class="container" style="padding: 20px;">
+    Search: <input type="text" [(ngModel)]="search" placeholder="name">
+  </div>
+
+  <div class="container">
+    <table class="table table-bordered text-center">
+      <thead>
+        <tr>
+          <td>MobileId</td>
+          <td>MobileName</td>
+          <td>MobilePrice</td>
+          <td>MobileBrand</td>
+          <td align="center">Action</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor=" let i = index; let data of mobile | myfilter: search">
+          <td> {{data.mobileid}} </td>
+          <td> {{data.mobilename}} </td>
+          <td> {{data.mobileprice}} </td>
+          <td> {{data.mobilebrand}} </td>
+          <td>
+            <a routerLink="/show" (click)="onDelete(i)">Delete</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

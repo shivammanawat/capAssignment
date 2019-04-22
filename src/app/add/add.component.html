@@ -1,0 +1,24 @@
+<div class="container">
+  <h2>Add Mobile Details</h2>
+  <form>
+    <div class="form-group">
+      <label for="mobileid">Mobile ID</label>
+      <input type="text" class="form-control" name="mobileid" [(ngModel)]="mobileid">
+    </div>
+    <div class="form-group">
+      <label for="mobilename">Mobile Name</label>
+      <input type="text" class="form-control" name="mobilename" [(ngModel)]="mobilename">
+    </div>
+    <div class="form-group">
+      <label for="mobileprice">Mobile Price</label>
+      <input type="text" class="form-control" name="mobileprice" [(ngModel)]="mobileprice"><br>
+    </div>
+    <div class="form-group">
+      <label for="mobilebrand">Mobile Brand</label>
+      <input type="text" class="form-control" name="mobilebrand" [(ngModel)]="mobilebrand"><br>
+    </div>
+
+    <button class="btn btn-success" type="submit" (click)="add()"> Add Mobile </button> &nbsp;
+    <a routerLink="/show"><button class="btn btn-danger"> Back </button></a>
+  </form>
+</div>
